@@ -110,7 +110,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-neutral-950">
+    <main className="min-h-screen">
       <section className="relative overflow-hidden border-b border-neutral-800 pt-32 pb-20 lg:pt-40 lg:pb-28">
         <Container size="lg">
           <div className="relative z-10 mx-auto max-w-3xl text-center">

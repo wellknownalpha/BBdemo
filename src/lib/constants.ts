@@ -6,8 +6,8 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://beyondbinary.com",
   ogImage: "/images/og-image.jpg",
   email: "hello@beyondbinary.com",
-  phone: "+1 (555) 123-4567",
-  address: "123 Innovation Drive, San Francisco, CA 94105",
+  phone: "+91 9591720838",
+  address: "48, Church St, Haridevpur, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560001, India",
   social: {
     twitter: "https://twitter.com/beyondbinary",
     linkedin: "https://linkedin.com/company/beyondbinary",

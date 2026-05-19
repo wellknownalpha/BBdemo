@@ -27,7 +27,7 @@ export default function PortfolioPage() {
   )
 
   return (
-    <main className="min-h-screen bg-neutral-950">
+    <main className="min-h-screen">
       <section className="relative overflow-hidden pt-32 pb-20">
         <Container>
           <AnimatedSection>

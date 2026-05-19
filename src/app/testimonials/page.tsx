@@ -28,7 +28,7 @@ export default function TestimonialsPage() {
   const [featured, ...rest] = testimonialsData
 
   return (
-    <main className="min-h-screen bg-neutral-950">
+    <main className="min-h-screen">
       <section className="relative overflow-hidden pt-32 pb-20">
         <div className="absolute inset-0 pointer-events-none" />
         <Container>
