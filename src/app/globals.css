@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Oldburg Display';
+  src: url('/fonts/OldburgDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/OldburgDisplay-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oldburg Display';
+  src: url('/fonts/OldburgDisplay-Regular.woff2') format('woff2'),
+       url('/fonts/OldburgDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oldburg Display';
+  src: url('/fonts/OldburgDisplay-SemiBold.woff2') format('woff2'),
+       url('/fonts/OldburgDisplay-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oldburg Display';
+  src: url('/fonts/OldburgDisplay-Medium.woff2') format('woff2'),
+       url('/fonts/OldburgDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oldburg Display';
+  src: url('/fonts/OldburgDisplay-Light.woff2') format('woff2'),
+       url('/fonts/OldburgDisplay-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   * {
     @apply border-neutral-200;
