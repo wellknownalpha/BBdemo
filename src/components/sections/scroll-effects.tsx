@@ -49,7 +49,7 @@ export default function ScrollEffects() {
             initial={{ scale: 0.3, opacity: 0, rotate: -40 }}
             animate={{ scale: 1, opacity: 0.6, rotate: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="font-oldburg text-[12rem] md:text-[16rem] font-bold text-[#FAFD00] select-none block text-center leading-none"
+            className="font-mono text-[12rem] md:text-[16rem] font-black text-[#FAFD00] select-none block text-center leading-none"
             style={{ minWidth: 200 }}
           >
             {currentSymbol}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google"
+import { Poppins, Playfair_Display, JetBrains_Mono } from "next/font/google"
 import { Toaster } from "sonner"
 
 import "@/app/globals.css"
@@ -7,9 +7,10 @@ import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import ScrollEffects from "@/components/sections/scroll-effects"
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
 })
 
 const playfair = Playfair_Display({
@@ -55,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} font-sans antialiased text-white`}
+        className={`${poppins.variable} ${playfair.variable} ${jetbrainsMono.variable} font-sans antialiased text-white`}
       >
         <div className="grid-pattern fixed inset-0 pointer-events-none z-0" />
         <ScrollEffects />

@@ -28,7 +28,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           id={id}
           rows={rows}
           className={cn(
-            'glass w-full resize-none rounded-xl px-4 py-2.5 text-sm text-white placeholder-neutral-500 outline-none transition-all duration-200',
+            'glass w-full resize-none rounded-xl px-4 py-2.5 text-sm font-sans text-white placeholder-neutral-500 outline-none transition-all duration-200',
             'focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/30',
             'disabled:cursor-not-allowed disabled:opacity-50',
             error &&

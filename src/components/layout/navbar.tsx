@@ -84,7 +84,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="relative z-10 flex items-center gap-2 text-lg font-bold tracking-tight text-white"
+            className="relative z-10 flex items-center gap-2 text-lg font-sans font-bold tracking-tight text-white"
           >
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-500 text-sm font-bold text-white">
               B
@@ -158,7 +158,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "group relative rounded-lg px-4 py-2 text-sm font-medium transition-colors",
+                      "group relative rounded-lg px-4 py-2 text-sm font-sans font-medium transition-colors",
                       isActive(item.href)
                         ? "text-white"
                         : "text-white/60 hover:text-white"

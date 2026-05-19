@@ -164,3 +164,9 @@
   .animate-delay-700 { animation-delay: 0.7s; }
   .animate-delay-800 { animation-delay: 0.8s; }
 }
+
+@layer utilities {
+  .font-bold, .font-semibold, strong, b {
+    font-family: 'Oldburg Display', Georgia, serif;
+  }
+}
