@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useState } from "react"
 import {
   Award,
   Target,
@@ -8,6 +9,7 @@ import {
   HeartHandshake,
   ArrowRight,
   Quote,
+  ChevronRight,
 } from "lucide-react"
 
 import { Container } from "@/components/ui/container"
@@ -68,10 +70,11 @@ const fadeUp = {
 }
 
 export default function AboutPage() {
+  const [hoveredMember, setHoveredMember] = useState<string | null>(null)
+
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-transparent" />
         <Container size="lg">
           <AnimatedSection className="relative text-center">
             <Badge variant="outline" className="mb-6">
@@ -79,7 +82,7 @@ export default function AboutPage() {
             </Badge>
             <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               About{" "}
-              <span className="bg-gradient-to-r from-primary-500 to-primary-300 bg-clip-text text-transparent">
+              <span className="text-white">
                 Beyond Binary
               </span>
             </h1>
@@ -129,7 +132,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary-500/20 to-secondary-500/20 p-1">
+              <div className="aspect-[4/3] rounded-2xl bg-neutral-800 p-1">
                 <div className="flex h-full w-full items-center justify-center rounded-xl bg-neutral-950">
                   <Quote className="h-16 w-16 text-primary-500/30" />
                 </div>
@@ -189,7 +192,7 @@ export default function AboutPage() {
             description="Key milestones that shaped Beyond Binary into what it is today."
           />
           <div className="relative mt-16">
-            <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-primary-500 via-primary-500/50 to-transparent lg:left-1/2 lg:-translate-x-px" />
+            <div className="absolute left-4 top-0 h-full w-px bg-primary-500/30 lg:left-1/2 lg:-translate-x-px" />
             <div className="space-y-12">
               {milestones.map((item, i) => (
                 <AnimatedItem key={item.year} custom={i}>
@@ -229,29 +232,66 @@ export default function AboutPage() {
             title="Meet the minds behind the work"
             description="A diverse collective of designers, engineers, and strategists united by craft."
           />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {teamMembers.map((member, i) => (
-              <AnimatedItem key={member.name} custom={i}>
-                <Card variant="hover" className="h-full overflow-hidden">
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src={member.avatar || "/placeholder.svg"}
-                      alt={member.name}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
+          <div className="mt-12">
+            <div className="relative">
+              {/* Hover preview image */}
+              <div className="sticky top-32 hidden lg:block">
+                {teamMembers.map((member) => (
+                  <div
+                    key={member.name}
+                    className={`absolute right-0 top-0 w-72 transition-all duration-300 ${
+                      hoveredMember === member.name
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 translate-x-8 pointer-events-none"
+                    }`}
+                  >
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-neutral-800 shadow-2xl">
+                      <img
+                        src={member.avatar || "/placeholder.svg"}
+                        alt={member.name}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
                   </div>
-                  <CardContent className="p-5">
-                    <h3 className="text-lg font-semibold">{member.name}</h3>
-                    <p className="mt-1 text-sm text-primary-500">
-                      {member.role}
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-neutral-400 line-clamp-3">
-                      {member.bio}
-                    </p>
-                  </CardContent>
-                </Card>
-              </AnimatedItem>
-            ))}
+                ))}
+              </div>
+
+              {/* Team list */}
+              <div className="divide-y divide-neutral-800">
+                {teamMembers.map((member, i) => (
+                  <AnimatedItem key={member.name} custom={i}>
+                    <div
+                      className="group flex items-start gap-6 py-6 lg:pr-80"
+                      onMouseEnter={() => setHoveredMember(member.name)}
+                      onMouseLeave={() => setHoveredMember(null)}
+                    >
+                      {/* Mobile avatar */}
+                      <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-neutral-700 lg:hidden">
+                        <img
+                          src={member.avatar || "/placeholder.svg"}
+                          alt={member.name}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-xl font-semibold text-white transition-colors duration-200 cursor-default lg:cursor-pointer lg:hover:text-[#FAFD00]">
+                            {member.name}
+                          </h3>
+                          <ChevronRight className="h-4 w-4 text-neutral-600 transition-all duration-200 lg:group-hover:translate-x-1 lg:group-hover:text-[#FAFD00]" />
+                        </div>
+                        <p className="mt-0.5 text-sm text-primary-500">
+                          {member.role}
+                        </p>
+                        <p className="mt-2 text-sm leading-relaxed text-neutral-400 max-w-xl">
+                          {member.bio}
+                        </p>
+                      </div>
+                    </div>
+                  </AnimatedItem>
+                ))}
+              </div>
+            </div>
           </div>
         </Container>
       </AnimatedSection>
@@ -260,7 +300,7 @@ export default function AboutPage() {
 
       <AnimatedSection className="py-20 lg:py-28">
         <Container size="lg">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-500/10 via-primary-500/5 to-transparent p-8 lg:p-12">
+          <div className="relative overflow-hidden rounded-2xl bg-neutral-900 p-8 lg:p-12">
             <div className="relative z-10 max-w-lg">
               <Badge variant="outline" className="mb-4">
                 Join Us

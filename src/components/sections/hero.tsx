@@ -33,8 +33,6 @@ export default function Hero() {
         </motion.div>
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/50 via-transparent to-neutral-950 z-[1]" />
-
       <Container className="relative z-10 pt-20">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
@@ -55,7 +53,7 @@ export default function Hero() {
             transition={{ ...transition, delay: 0.1 }}
             className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            <span className="bg-gradient-to-r from-white via-primary-300 to-primary-500 bg-clip-text text-transparent">
+            <span className="text-white">
               We Build Digital Products That Scale
             </span>
           </motion.h1>

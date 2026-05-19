@@ -1,127 +1,84 @@
 "use client"
 
-import {
-  Sparkles,
-  Code2,
-  TrendingUp,
-  Workflow,
-  Cloud,
-  BarChart3,
-  Brain,
-  HeadphonesIcon,
-  type LucideIcon,
-} from "lucide-react"
-import { useState } from "react"
 import { motion } from "framer-motion"
-
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/container"
-import { SectionHeading } from "@/components/ui/section-heading"
-import { AnimatedSection, AnimatedItem } from "@/components/ui/animated-section"
-import { cn } from "@/lib/utils"
 import { servicesData } from "@/lib/constants"
+import { Sparkles, Code2, TrendingUp, Workflow, Cloud, BarChart3, ArrowUpRight } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 
 const iconMap: Record<string, LucideIcon> = {
-  Sparkles,
-  Code2,
-  TrendingUp,
-  Workflow,
-  Cloud,
-  BarChart3,
-  Brain,
-  HeadphonesIcon,
-}
-
-interface ServiceItem {
-  icon: string
-  title: string
-  description: string
-  features: string[]
+  Sparkles, Code2, TrendingUp, Workflow, Cloud, BarChart3,
 }
 
 export default function Services() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const items = servicesData.slice(0, 6)
 
   return (
-    <section id="services" className="relative py-24 lg:py-32">
+    <section id="services" className="section-padding">
       <Container>
-        <AnimatedSection>
-          <SectionHeading
-            label="What We Do"
-            title="Services"
-            description="From strategy to execution, we deliver end-to-end digital solutions that transform businesses."
-            align="center"
-          />
-        </AnimatedSection>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-16 text-center"
+        >
+          <p className="text-sm font-medium text-[#FAFD00] tracking-wider uppercase">Our service</p>
+          <h2 className="mt-3 text-display-sm sm:text-display-md font-bold text-white">
+            What We Do
+          </h2>
+        </motion.div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {(servicesData as ServiceItem[]).map((service, i) => {
+        <div className="divide-y divide-white/10">
+          {items.map((service, i) => {
             const Icon = iconMap[service.icon] || Sparkles
-            const isHovered = hoveredIndex === i
-
             return (
-              <AnimatedItem key={i} custom={i}>
-                <Card
-                  variant="glass"
-                  className={cn(
-                    "group relative h-full cursor-default transition-all duration-500",
-                    isHovered && "translate-y-[-8px] shadow-xl shadow-primary-500/10",
-                  )}
-                  onMouseEnter={() => setHoveredIndex(i)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                >
-                  <div
-                    className={cn(
-                      "absolute inset-0 rounded-xl opacity-0 transition-opacity duration-500",
-                      isHovered && "opacity-100",
-                    )}
-                    style={{
-                      background:
-                        "radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0,56,255,0.08), transparent 40%)",
-                    }}
-                  />
-
-                  <div className="relative z-10 flex flex-col gap-4 p-6">
-                    <div
-                      className={cn(
-                        "flex h-12 w-12 items-center justify-center rounded-lg transition-all duration-500",
-                        isHovered
-                          ? "bg-primary-500 text-white shadow-lg shadow-primary-500/30"
-                          : "bg-primary-500/10 text-primary-400",
-                      )}
-                    >
-                      <Icon size={24} />
-                    </div>
-
-                    <h3 className="text-lg font-semibold text-white">{service.title}</h3>
-                    <p className="text-sm leading-relaxed text-neutral-400">
-                      {service.description}
-                    </p>
-
-                    {service.features && service.features.length > 0 && (
-                      <ul className="mt-auto space-y-2 pt-4">
-                        {service.features.map((feature, fi) => (
-                          <li key={fi} className="flex items-start gap-2 text-sm text-neutral-500">
-                            <span className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-primary-500" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="group grid gap-6 py-10 first:pt-0 last:pb-0 sm:grid-cols-[auto_1fr_auto] sm:gap-10"
+              >
+                <div className="flex items-start gap-4 sm:flex-col sm:items-center">
+                  <span className="hidden text-5xl font-bold text-white/10 sm:block">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white/70 sm:hidden">
+                    <Icon size={22} />
                   </div>
-                </Card>
-              </AnimatedItem>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-3">
+                    <div className="hidden h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white/70 group-hover:bg-[#FAFD00]/20 group-hover:text-[#FAFD00] transition-colors sm:flex">
+                      <Icon size={16} />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white sm:text-2xl">{service.title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-white/60 max-w-xl">
+                    {service.description}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-sm text-white/50">
+                    {service.features.map((f) => (
+                      <span key={f} className="flex items-center gap-1.5">
+                        <span className="h-1 w-1 rounded-full bg-[#FAFD00]" />
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="hidden items-start justify-end sm:flex">
+                  <span className="text-sm text-white/30 group-hover:text-[#FAFD00] transition-colors">
+                    <ArrowUpRight size={18} />
+                  </span>
+                </div>
+              </motion.div>
             )
           })}
         </div>
-
-        <AnimatedItem custom={8} className="mt-12 text-center">
-          <Button variant="secondary" size="lg">
-            View All Services
-          </Button>
-        </AnimatedItem>
       </Container>
     </section>
   )

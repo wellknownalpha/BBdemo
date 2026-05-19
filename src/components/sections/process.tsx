@@ -28,7 +28,7 @@ export default function Process() {
         </AnimatedSection>
 
         <div className="relative mt-16">
-          <div className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-primary-500/50 via-primary-500/20 to-transparent lg:block" />
+          <div className="absolute left-6 top-0 hidden h-full w-px bg-primary-500/30 lg:block" />
 
           <div className="grid gap-12 lg:grid-cols-2 xl:grid-cols-3">
             {(processSteps as ProcessStep[]).map((step, i) => (

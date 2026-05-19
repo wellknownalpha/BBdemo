@@ -93,7 +93,6 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/5 bg-neutral-950">
       {/* Subtle top highlight */}
-      <div className="absolute top-0 left-1/2 h-px w-1/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-6 pt-20 pb-8 lg:px-8">
         {/* Top section: columns + newsletter */}

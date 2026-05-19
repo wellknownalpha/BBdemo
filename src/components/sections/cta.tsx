@@ -12,9 +12,6 @@ import { fadeUp, transition } from "@/lib/animations"
 export default function CTA() {
   return (
     <section className="relative overflow-hidden py-24 lg:py-32">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 via-primary-500/5 to-transparent" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,56,255,0.15),transparent_50%)]" />
-
       <div className="absolute left-0 top-0 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-500/10 blur-3xl" />
       <div className="absolute bottom-0 right-0 h-96 w-96 translate-x-1/3 translate-y-1/3 rounded-full bg-primary-500/10 blur-3xl" />
 
@@ -30,7 +27,7 @@ export default function CTA() {
               className="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl"
             >
               Ready to Build Something{" "}
-              <span className="bg-gradient-to-r from-primary-300 to-primary-500 bg-clip-text text-transparent">
+              <span className="text-white">
                 Extraordinary
               </span>
               ?

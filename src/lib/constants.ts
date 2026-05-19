@@ -245,40 +245,52 @@ export const testimonialsData = [
 
 export const teamMembers = [
   {
-    name: "David Park",
-    role: "CEO & Co-Founder",
-    bio: "Visionary leader with 15+ years in tech strategy and digital transformation.",
+    name: "Yagni",
+    role: "CEO & Founder",
+    bio: "Visionary leader driving the company's strategic direction and growth.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80",
   },
   {
-    name: "Maya Torres",
-    role: "CTO & Co-Founder",
-    bio: "Full-stack architect specializing in scalable distributed systems and AI.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80",
-  },
-  {
-    name: "Leo Zhang",
-    role: "Head of Design",
-    bio: "Award-winning designer crafting memorable brand experiences and interfaces.",
+    name: "Mikey",
+    role: "Chief Technology Officer",
+    bio: "Full-stack architect overseeing all technical operations and innovation.",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80",
   },
   {
-    name: "Zara Williams",
-    role: "Head of Marketing",
-    bio: "Growth strategist driving measurable results through data-informed campaigns.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80",
-  },
-  {
-    name: "Ethan Brooks",
-    role: "Lead Engineer",
-    bio: "Backend expert passionate about building robust, scalable APIs and systems.",
+    name: "Vikiy",
+    role: "Head of Design",
+    bio: "Creative lead crafting memorable brand experiences and interfaces.",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80",
   },
   {
-    name: "Sofia Laurent",
+    name: "Pragathi",
+    role: "Lead Developer",
+    bio: "Full-stack engineer building robust, scalable web applications.",
+    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80",
+  },
+  {
+    name: "Priya",
     role: "Project Manager",
-    bio: "Certified PMP ensuring every project delivers on time and beyond expectations.",
+    bio: "Certified professional ensuring every project delivers on time and beyond expectations.",
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80",
+  },
+  {
+    name: "Padmini",
+    role: "Marketing Strategist",
+    bio: "Growth-driven marketer crafting data-informed campaigns that deliver results.",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&q=80",
+  },
+  {
+    name: "Sanjana",
+    role: "UX Designer",
+    bio: "User experience specialist passionate about intuitive, accessible interfaces.",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&q=80",
+  },
+  {
+    name: "Kashish",
+    role: "Quality Assurance Lead",
+    bio: "Detail-oriented tester ensuring every product meets the highest quality standards.",
+    avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&q=80",
   },
 ];
 

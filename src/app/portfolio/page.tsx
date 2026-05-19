@@ -29,7 +29,6 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-neutral-950">
       <section className="relative overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-transparent" />
         <Container>
           <AnimatedSection>
             <SectionHeading

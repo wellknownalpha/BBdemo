@@ -28,7 +28,6 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-neutral-950">
       <section className="relative overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-transparent" />
         <Container>
           <AnimatedSection>
             <SectionHeading
@@ -95,7 +94,7 @@ export default function BlogPage() {
       <section className="pb-32">
         <Container size="sm">
           <AnimatedSection>
-            <Card className="bg-gradient-to-br from-neutral-900 to-neutral-950 border-primary-500/20 overflow-hidden relative">
+            <Card className="bg-neutral-900 border-primary-500/20 overflow-hidden relative">
               <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
               <CardContent className="p-10 md:p-14 text-center relative">
                 <div className="mx-auto w-14 h-14 rounded-full bg-primary-500/10 flex items-center justify-center mb-6">

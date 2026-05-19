@@ -42,7 +42,7 @@ export default function PortfolioShowcase() {
                     className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url(${item.image})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-neutral-900/60" />
 
                   <Badge variant="primary" className="absolute left-4 top-4">
                     {item.category}

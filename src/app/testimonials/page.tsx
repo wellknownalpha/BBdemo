@@ -30,7 +30,7 @@ export default function TestimonialsPage() {
   return (
     <main className="min-h-screen bg-neutral-950">
       <section className="relative overflow-hidden pt-32 pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary-500/5 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 pointer-events-none" />
         <Container>
           <AnimatedSection>
             <SectionHeading
@@ -46,7 +46,7 @@ export default function TestimonialsPage() {
       <section className="pb-20">
         <Container>
           <AnimatedSection className="mb-20">
-            <Card className="relative bg-gradient-to-br from-neutral-900 to-neutral-950 border-primary-500/20 overflow-hidden">
+            <Card className="relative bg-neutral-900 border-primary-500/20 overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl pointer-events-none" />
               <CardContent className="p-8 md:p-12 lg:p-16">
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">

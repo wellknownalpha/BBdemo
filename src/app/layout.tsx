@@ -5,6 +5,7 @@ import { Toaster } from "sonner"
 import "@/app/globals.css"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
+import ScrollEffects from "@/components/sections/scroll-effects"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -57,6 +58,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} ${jetbrainsMono.variable} font-sans antialiased text-white`}
       >
         <div className="grid-pattern fixed inset-0 pointer-events-none z-0" />
+        <ScrollEffects />
         <div className="relative z-10">
           <Navbar />
           <main className="relative min-h-screen">{children}</main>

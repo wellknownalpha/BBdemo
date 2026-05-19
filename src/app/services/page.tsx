@@ -175,7 +175,6 @@ export default function ServicesPage() {
   return (
     <>
       <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/5 via-transparent to-transparent" />
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3">
           <Sparkles className="h-64 w-64 text-primary-500/5" />
         </div>
@@ -186,7 +185,7 @@ export default function ServicesPage() {
             </Badge>
             <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               Our{" "}
-              <span className="bg-gradient-to-r from-primary-500 to-primary-300 bg-clip-text text-transparent">
+              <span className="text-white">
                 Services
               </span>
             </h1>
@@ -240,7 +239,7 @@ export default function ServicesPage() {
 
       <AnimatedSection className="py-20 lg:py-28">
         <Container size="lg">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-500/10 via-primary-500/5 to-transparent p-8 text-center lg:p-12">
+          <div className="relative overflow-hidden rounded-2xl bg-neutral-900 p-8 text-center lg:p-12">
             <div className="relative z-10 mx-auto max-w-xl">
               <Badge variant="outline" className="mb-4">
                 Get Started

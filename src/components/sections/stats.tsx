@@ -47,7 +47,7 @@ function AnimatedCounter({ value, suffix = "+" }: { value: string; suffix?: stri
 export default function Stats() {
   return (
     <section className="relative py-24 lg:py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-transparent" />
+      <div className="absolute inset-0 bg-neutral-900/50" />
 
       <Container>
         <AnimatedSection>
