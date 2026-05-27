@@ -51,13 +51,13 @@ const values = [
 ]
 
 const milestones = [
-  { year: "2018", event: "Founded with a vision to bridge AI and design" },
-  { year: "2019", event: "First major enterprise client onboarded" },
-  { year: "2020", event: "Expanded to 30+ team members globally" },
-  { year: "2021", event: "Launched proprietary AI analytics platform" },
-  { year: "2022", event: "Opened offices in London & Singapore" },
-  { year: "2023", event: "Named Top 10 Digital Agency by DesignRush" },
-  { year: "2024", event: "Surpassed 200 successful projects delivered" },
+  { year: "2026", event: "Founded with a vision to bridge AI and design" },
+  { year: "2026", event: "First major enterprise client onboarded" },
+  { year: "2026", event: "Expanded to 30+ team members globally" },
+  { year: "2026", event: "Launched proprietary AI analytics platform" },
+  { year: "2027", event: "Opened offices in London & Singapore" },
+  { year: "2028", event: "Named Top 10 Digital Agency by DesignRush" },
+  { year: "2029", event: "Surpassed 200 successful projects delivered" },
 ]
 
 const fadeUp = {
